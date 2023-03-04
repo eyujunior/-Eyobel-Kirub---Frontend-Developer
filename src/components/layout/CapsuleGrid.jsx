@@ -8,12 +8,12 @@ const CapsuleGrid = ({ capsules }) => {
   if (capsules.length < 1) {
     return (
       <div className="layout flex items-center justify-center">
-        <img src={NoData} alt="no data" className="w-1/3" />
+        <img src={NoData} alt="no data" className="w-3/5 sm:w-1/3" />
       </div>
     );
   }
   return (
-    <div className="grid grid-cols-4 gap-4 mb-16">
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-16">
       {capsules.map((capsule) => {
         return (
           <Link

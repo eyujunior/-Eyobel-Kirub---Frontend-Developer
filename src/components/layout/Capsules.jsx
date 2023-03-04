@@ -12,10 +12,10 @@ const Capsules = () => {
 
   return (
     <div className="layout">
-      <h2 className="text-5xl text-center font-bold mb-12 capitalize">
+      <h2 className="xl:text-5xl text-2xl sm:text-3xl md:text-4xl text-center font-bold mb-12 capitalize">
         search your favourite capsules
       </h2>
-      <div className="grid grid-cols-4 gap-4 mb-20">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-20">
         <PrimaryDropdown
           onChange={setStatus}
           label="status"
@@ -33,7 +33,7 @@ const Capsules = () => {
         />
         <Button
           handleClick={onSearch}
-          custom="bg-secondary text-primary rounded font-semibold"
+          custom="bg-secondary py-2 text-primary rounded-sm font-semibold"
         >
           Search
         </Button>

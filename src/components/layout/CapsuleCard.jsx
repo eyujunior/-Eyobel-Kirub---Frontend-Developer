@@ -8,7 +8,11 @@ const CapsuleCard = ({ capsule_serial, status, capsule_id, landings }) => {
         <span className="w-min text-primary font-semibold capitalize text-sm rounded-sm">
           {capsule_serial}
         </span>
-        <span className="bg-secondary/20 text-primary py-1 px-1.5 capitalize text-sm rounded-sm">
+        <span
+          className={`${status === "active" && "bg-green-500"} ${
+            status === "retired" && "bg-secondary"
+          } text-primary py-1 px-1.5 capitalize text-sm rounded-sm`}
+        >
           {status}
         </span>
       </div>

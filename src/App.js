@@ -1,6 +1,3 @@
-import Capsules from "./components/layout/Capsules";
-import Hero from "./components/layout/Hero";
-import Navbar from "./components/layout/Navbar";
 import { Route, Routes, useLocation } from "react-router-dom";
 import DetailModal from "./components/utils/DetailModal";
 import Home from "./pages/Home";

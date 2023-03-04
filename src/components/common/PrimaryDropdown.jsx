@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const PrimaryDropdown = ({ label, id, data, onChange, error }) => {
+const PrimaryDropdown = ({ label, id, data, onChange }) => {
   const [showList, setShowList] = useState(false);
   const [selected, setSelected] = useState(label);
 
