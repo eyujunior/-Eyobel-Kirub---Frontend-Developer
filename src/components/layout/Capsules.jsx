@@ -1,26 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import Button from "../common/Button";
 import PrimaryDropdown from "../common/PrimaryDropdown";
 import CapsuleGrid from "./CapsuleGrid";
-
+import { CapsuleContext } from "../../context/capsuleContext";
 const Capsules = () => {
-  const [status, setStatus] = useState("active");
-  const [type, setType] = useState("Dragon 1.1");
-  const [landings, setLandings] = useState(2);
-  const [data, setData] = useState([]);
-
-  const fetchCapsules = () => {
-    fetch(
-      `https://api.spacexdata.com/v3/capsules?status=${status}&landings=${landings}&type=${type}`
-    )
-      .then((res) => res.json())
-      .then((data) => setData(data));
-  };
-
-  useEffect(() => {
-    fetchCapsules();
-  }, []);
-
+  const { data, setData, fetchCapsules, setType, setLandings, setStatus } =
+    useContext(CapsuleContext);
   const onSearch = () => {
     fetchCapsules();
   };

@@ -1,13 +1,24 @@
 import Capsules from "./components/layout/Capsules";
 import Hero from "./components/layout/Hero";
 import Navbar from "./components/layout/Navbar";
-
+import { Route, Routes, useLocation } from "react-router-dom";
+import DetailModal from "./components/utils/DetailModal";
+import Home from "./pages/Home";
 function App() {
+  const location = useLocation();
+  const background = location.state && location.state.background;
   return (
     <div>
-      <Navbar />
-      <Hero />
-      <Capsules />
+      <Routes location={background || location}>
+        <Route path="/" element={<Home />}>
+          <Route path="capsule" element={<DetailModal />} />
+        </Route>
+      </Routes>
+      {background && (
+        <Routes>
+          <Route path="capsule" element={<DetailModal />} />
+        </Routes>
+      )}
     </div>
   );
 }

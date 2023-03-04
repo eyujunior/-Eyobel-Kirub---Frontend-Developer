@@ -2,7 +2,9 @@ import React from "react";
 import DetailModal from "../utils/DetailModal";
 import CapsuleCard from "./CapsuleCard";
 import NoData from "../../assets/images/no-data.png";
+import { Link, useLocation } from "react-router-dom";
 const CapsuleGrid = ({ capsules }) => {
+  const location = useLocation();
   if (capsules.length < 1) {
     return (
       <div className="layout flex items-center justify-center">
@@ -13,7 +15,15 @@ const CapsuleGrid = ({ capsules }) => {
   return (
     <div className="grid grid-cols-4 gap-4 mb-16">
       {capsules.map((capsule) => {
-        return <CapsuleCard {...capsule} />;
+        return (
+          <Link
+            to={`/capsule?id=${capsule.capsule_serial}`}
+            state={{ background: location }}
+            key={capsule.capsule_serial}
+          >
+            <CapsuleCard {...capsule} />
+          </Link>
+        );
       })}
 
       {/* <DetailModal /> */}
