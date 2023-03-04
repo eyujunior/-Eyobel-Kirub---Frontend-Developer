@@ -5,8 +5,26 @@ import CapsuleGrid from "./CapsuleGrid";
 
 const Capsules = () => {
   const [status, setStatus] = useState("active");
-  const [type, setType] = useState("Dragon 1.0");
-  const [landings, setLandings] = useState("above 1");
+  const [type, setType] = useState("Dragon 1.1");
+  const [landings, setLandings] = useState(2);
+  const [data, setData] = useState([]);
+
+  const fetchCapsules = () => {
+    fetch(
+      `https://api.spacexdata.com/v3/capsules?status=${status}&landings=${landings}&type=${type}`
+    )
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  };
+
+  useEffect(() => {
+    fetchCapsules();
+  }, []);
+
+  const onSearch = () => {
+    fetchCapsules();
+  };
+
   return (
     <div className="layout">
       <h2 className="text-5xl text-center font-bold mb-12 capitalize">
@@ -26,13 +44,16 @@ const Capsules = () => {
         <PrimaryDropdown
           onChange={setLandings}
           label="landings"
-          data={["above 1", "above 2", "above 3"]}
+          data={[1, 2, 3]}
         />
-        <Button custom="bg-secondary text-primary rounded font-semibold">
+        <Button
+          handleClick={onSearch}
+          custom="bg-secondary text-primary rounded font-semibold"
+        >
           Search
         </Button>
       </div>
-      <CapsuleGrid />
+      <CapsuleGrid capsules={data} />
     </div>
   );
 };

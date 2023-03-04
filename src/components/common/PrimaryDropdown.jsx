@@ -36,7 +36,7 @@ const PrimaryDropdown = ({ label, id, data, onChange, error }) => {
         </svg>
         <div
           id="dropdown"
-          className={`z-[1000]  absolute top-full left-0 py-2 rounded shadow w-full ${
+          className={`z-[1000] bg-white  absolute top-full left-0 py-2 pb-0 rounded shadow w-full ${
             showList ? " visible opacity-100" : "invisible opacity-0"
           }`}
         >
@@ -45,7 +45,7 @@ const PrimaryDropdown = ({ label, id, data, onChange, error }) => {
             aria-labelledby="dropdownDefaultButton"
           >
             {data.map((item) => (
-              <li onClick={() => changeSelected(item)}>
+              <li key={item} onClick={() => changeSelected(item)}>
                 <p className="block border-b border-b-N99/5 px-4 py-1.5">
                   {item}
                 </p>
