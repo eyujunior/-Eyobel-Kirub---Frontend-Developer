@@ -20,11 +20,14 @@ const DetailModal = () => {
       ></div>
       <div className="bg-white w-11/12 lg:w-4/5 xl:w-3/4 max-h-[80%] relative z-40 rounded overflow-y-auto p-4 2xl:p-6 shadow-lg flex gap-8 items-start justify-between">
         <div className="flex flex-col items-center md:items-start md:flex-row gap-8 2xl:gap-12">
-          <img
-            src={capsuleImage}
-            alt="capsule"
-            className="md:w-2/5 sm:w-3/4 w-11/12 border object-cover"
-          />
+          <div className="md:w-2/5 sm:w-3/4 w-11/12 space-y-2">
+            <img
+              src={capsuleImage}
+              alt="capsule"
+              className=" border object-cover"
+            />
+            <p className="text-sm text-center">{selectedCapsule.details}</p>
+          </div>
           <div className=" md:w-2/5 sm:w-3/4 w-11/12 lg:w-1/2 space-y-4">
             <div className="flex items-center capitalize justify-between">
               <h3 className="font-semibold">type</h3>
