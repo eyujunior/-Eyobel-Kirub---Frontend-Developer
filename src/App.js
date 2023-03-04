@@ -1,7 +1,13 @@
+import Capsules from "./components/layout/Capsules";
+import Hero from "./components/layout/Hero";
+import Navbar from "./components/layout/Navbar";
+
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-center">Hello</h1>
+    <div>
+      <Navbar />
+      <Hero />
+      <Capsules />
     </div>
   );
 }
