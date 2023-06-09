@@ -108,84 +108,139 @@ const Profile = () => {
               </div>
             </div>
           </div>
-          <div className="w-2/3 bg-N99/30 rounded-md p-4 2xl:px-6 space-y-4">
-            <div className="flex items-center gap-4 justify-between ">
-              <h2 className="capitalize font-medium text-N40">
-                Main Office Residence
-              </h2>
-              <button className="text-green50 text-sm bg-green90/30 p-3 rounded-md font-medium capitalize">
-                Organization ID: ED5E233A
-              </button>
-            </div>
-            <div className="flex gap-8">
-              <div className="w-1/2 space-y-4">
-                <div className="grid gap-4 grid-cols-2 capitalize text-N20">
-                  <div>
-                    <span className="text-sm text-N70">kebele</span>
-                    <p className="text-sm">Kolfe Keraniyo</p>
-                  </div>
-                  <div>
-                    <span className="text-sm text-N70">Subcity</span>
-                    <p className="text-sm">Addis Ababa</p>
-                  </div>
-                  <div>
-                    <span className="text-sm text-N70">House No </span>
-                    <p className="text-sm">054</p>
-                  </div>
-                  <div>
-                    <span className="text-sm text-N70">Region</span>
-                    <p className="text-sm">Addis Ababa</p>
-                  </div>
-                  <div>
-                    <span className="text-sm text-N70">zone</span>
-                    <p className="text-sm">Addis Ababa</p>
-                  </div>
-                </div>
-                <div className=" capitalize">
-                  <span className="text-sm text-N70">address</span>
-                  <p className="text-sm">Stadium Kenema Pharmacy</p>
-                  <p className="text-sm">Addis Ababa, Ethiopia</p>
-                </div>
-                <div className=" capitalize space-y-1">
-                  <span className="text-sm text-N70">
-                    Boundaries of the enterprise
-                  </span>
-                  <div className="flex items-center gap-2 text-green50 bg-green90/30 w-fit p-2 2xl:px-4 rounded">
-                    <img src={building} alt="building" />
-                    <p>Rural / Urban</p>
-                  </div>
-                </div>
-                <div className=" capitalize">
-                  <span className="text-sm text-N70">Foreign Residence</span>
-                  <p className="text-sm">Stadium Kenema Pharmacy</p>
-                  <p className="text-sm">Addis Ababa, Ethiopia</p>
-                </div>
-                <div className="text-sm">
-                  <p className=" text-N70 capitalize mb-2">
-                    Contact information
-                  </p>
+          <div className="w-2/3 space-y-4 2xl:space-y-6">
+            <div className="bg-N99/30 rounded-md p-4 2xl:px-6 space-y-4">
+              <div className="flex items-center gap-4 justify-between ">
+                <h2 className="capitalize font-medium text-N40">
+                  Main Office Residence
+                </h2>
+                <button className="text-green50 text-sm bg-green90/30 p-3 rounded-md font-medium capitalize">
+                  Organization ID: ED5E233A
+                </button>
+              </div>
+              <div className="flex gap-8">
+                <div className="w-1/2 space-y-4">
                   <div className="grid gap-4 grid-cols-2 capitalize text-N20">
-                    <div className="flex items-center gap-2">
-                      <MdInsertLink className="text-N50" />
-                      <p className="font-medium">http://www.agri.com</p>
+                    <div>
+                      <span className="text-sm text-N70">kebele</span>
+                      <p className="text-sm">Kolfe Keraniyo</p>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <MdPhoneInTalk className="text-N50" />
-                      <p className="font-medium">+251913428778</p>
+                    <div>
+                      <span className="text-sm text-N70">Subcity</span>
+                      <p className="text-sm">Addis Ababa</p>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <MdMailOutline className="text-N50" />
-                      <p className="font-medium">info@gmail.com</p>
+                    <div>
+                      <span className="text-sm text-N70">House No </span>
+                      <p className="text-sm">054</p>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <MdPhoneInTalk className="text-N50" />
-                      <p className="font-medium">+251913428778</p>
+                    <div>
+                      <span className="text-sm text-N70">Region</span>
+                      <p className="text-sm">Addis Ababa</p>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <MdFax className="text-N50" />
-                      <p className="font-medium">fax1232</p>
+                    <div>
+                      <span className="text-sm text-N70">zone</span>
+                      <p className="text-sm">Addis Ababa</p>
                     </div>
                   </div>
+                  <div className=" capitalize">
+                    <span className="text-sm text-N70">address</span>
+                    <p className="text-sm">Stadium Kenema Pharmacy</p>
+                    <p className="text-sm">Addis Ababa, Ethiopia</p>
+                  </div>
+                  <div className=" capitalize space-y-1">
+                    <span className="text-sm text-N70">
+                      Boundaries of the enterprise
+                    </span>
+                    <div className="flex items-center gap-2 text-green50 bg-green90/30 w-fit p-2 2xl:px-4 rounded">
+                      <img src={building} alt="building" />
+                      <p>Rural / Urban</p>
+                    </div>
+                  </div>
+                  <div className=" capitalize">
+                    <span className="text-sm text-N70">Foreign Residence</span>
+                    <p className="text-sm">Stadium Kenema Pharmacy</p>
+                    <p className="text-sm">Addis Ababa, Ethiopia</p>
+                  </div>
+                  <div className="text-sm">
+                    <p className=" text-N70 capitalize mb-2">
+                      Contact information
+                    </p>
+                    <div className="grid gap-4 grid-cols-2 capitalize text-N20">
+                      <div className="flex items-center gap-2">
+                        <MdInsertLink className="text-N50" />
+                        <p className="font-medium">http://www.agri.com</p>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MdPhoneInTalk className="text-N50" />
+                        <p className="font-medium">+251913428778</p>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MdMailOutline className="text-N50" />
+                        <p className="font-medium">info@gmail.com</p>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MdPhoneInTalk className="text-N50" />
+                        <p className="font-medium">+251913428778</p>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MdFax className="text-N50" />
+                        <p className="font-medium">fax1232</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className=" capitalize w-4/5">
+                    <h3 className="font-medium py-2 border-b mb-4">
+                      sector details
+                    </h3>
+                    <div className="space-y-4 text-sm">
+                      <div className="flex gap-4 justify-between">
+                        <p className="text-N60">sector</p>
+                        <h4>agriculture</h4>
+                      </div>
+                      <div className="flex gap-4 justify-between">
+                        <p className="text-N60">Sub sector</p>
+                        <h4>Crop Agriculture</h4>
+                      </div>
+                      <div className="flex gap-4 justify-between">
+                        <p className="text-N60">Engaged Fields</p>
+                        <h4>Coffee</h4>
+                      </div>
+                      <div className="flex gap-4 justify-between">
+                        <p className="text-N60">Product Supply Market</p>
+                        <h4>For Abroad</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-N99/30 rounded-md p-4 2xl:px-6 space-y-4">
+              <h2 className="text-N30 font-semibold capitalize">
+                enterprise data
+              </h2>
+              <div className="flex justify-between items-start">
+                <div className=" space-y-4">
+                  <div>
+                    <p className="text-sm text-N60">
+                      Tax Payer Identification Number
+                    </p>
+                    <h3 className="text-xl font-semibold text-green30">
+                      ET093442
+                    </h3>
+                  </div>
+                  <div>
+                    <p className="text-sm text-N60">Amount of capital</p>
+                    <h3 className="font-medium text-green30">30000 ETB</h3>
+                  </div>
+                  <div>
+                    <p className="text-sm text-N60">Source of resource</p>
+                    <h3 className="font-medium text-green30">
+                      Something reason here of the source
+                    </h3>
+                  </div>
+                </div>
+                <div className="bg-white p-4 rounded-md w-2/5 capitalize font-medium text-N50">
+                  <h4>total assets</h4>
                 </div>
               </div>
             </div>
