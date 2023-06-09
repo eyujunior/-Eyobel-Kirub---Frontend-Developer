@@ -1,6 +1,9 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import DetailModal from "./components/utils/DetailModal";
 import Home from "./pages/Home";
+import Certificate from "./pages/Certificate";
+import FingerPrint from "./pages/FingerPrint";
+import Profile from "./pages/Profile";
 function App() {
   const location = useLocation();
   const background = location.state && location.state.background;
@@ -16,6 +19,15 @@ function App() {
           <Route path="capsule" element={<DetailModal />} />
         </Routes>
       )}
+      <Routes>
+        <Route path="/certificate" element={<Certificate />}></Route>
+      </Routes>
+      <Routes>
+        <Route path="/fingerprint" element={<FingerPrint />}></Route>
+      </Routes>
+      <Routes>
+        <Route path="/profile" element={<Profile />}></Route>
+      </Routes>
     </div>
   );
 }
