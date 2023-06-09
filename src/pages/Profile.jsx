@@ -1,5 +1,11 @@
 import EmployeeCard from "../components/common/EmployeeCard";
-
+import building from "../assets/icons/healthicons_city.png";
+import {
+  MdInsertLink,
+  MdMailOutline,
+  MdFax,
+  MdPhoneInTalk,
+} from "react-icons/md";
 const Profile = () => {
   return (
     <div className="w-11/12 mx-auto rounded-xl bg-white mt-8 shadow-md">
@@ -9,7 +15,7 @@ const Profile = () => {
         className="w-full h-64 object-cover rounded-t-xl"
       />
       <div className="p-8">
-        <div className="-translate-y-1/2">
+        <div className="-translate-y-1/2 space-y-2">
           <img
             src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
             alt="image"
@@ -102,8 +108,8 @@ const Profile = () => {
               </div>
             </div>
           </div>
-          <div className="w-2/3 bg-N99/30 rounded-md">
-            <div className="flex items-center gap-4 justify-between p-4 2xl:px-6">
+          <div className="w-2/3 bg-N99/30 rounded-md p-4 2xl:px-6 space-y-4">
+            <div className="flex items-center gap-4 justify-between ">
               <h2 className="capitalize font-medium text-N40">
                 Main Office Residence
               </h2>
@@ -112,7 +118,76 @@ const Profile = () => {
               </button>
             </div>
             <div className="flex gap-8">
-              <div className="grid gap-4 grid-cols-3"></div>
+              <div className="w-1/2 space-y-4">
+                <div className="grid gap-4 grid-cols-2 capitalize text-N20">
+                  <div>
+                    <span className="text-sm text-N70">kebele</span>
+                    <p className="text-sm">Kolfe Keraniyo</p>
+                  </div>
+                  <div>
+                    <span className="text-sm text-N70">Subcity</span>
+                    <p className="text-sm">Addis Ababa</p>
+                  </div>
+                  <div>
+                    <span className="text-sm text-N70">House No </span>
+                    <p className="text-sm">054</p>
+                  </div>
+                  <div>
+                    <span className="text-sm text-N70">Region</span>
+                    <p className="text-sm">Addis Ababa</p>
+                  </div>
+                  <div>
+                    <span className="text-sm text-N70">zone</span>
+                    <p className="text-sm">Addis Ababa</p>
+                  </div>
+                </div>
+                <div className=" capitalize">
+                  <span className="text-sm text-N70">address</span>
+                  <p className="text-sm">Stadium Kenema Pharmacy</p>
+                  <p className="text-sm">Addis Ababa, Ethiopia</p>
+                </div>
+                <div className=" capitalize space-y-1">
+                  <span className="text-sm text-N70">
+                    Boundaries of the enterprise
+                  </span>
+                  <div className="flex items-center gap-2 text-green50 bg-green90/30 w-fit p-2 2xl:px-4 rounded">
+                    <img src={building} alt="building" />
+                    <p>Rural / Urban</p>
+                  </div>
+                </div>
+                <div className=" capitalize">
+                  <span className="text-sm text-N70">Foreign Residence</span>
+                  <p className="text-sm">Stadium Kenema Pharmacy</p>
+                  <p className="text-sm">Addis Ababa, Ethiopia</p>
+                </div>
+                <div className="text-sm">
+                  <p className=" text-N70 capitalize mb-2">
+                    Contact information
+                  </p>
+                  <div className="grid gap-4 grid-cols-2 capitalize text-N20">
+                    <div className="flex items-center gap-2">
+                      <MdInsertLink className="text-N50" />
+                      <p className="font-medium">http://www.agri.com</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <MdPhoneInTalk className="text-N50" />
+                      <p className="font-medium">+251913428778</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <MdMailOutline className="text-N50" />
+                      <p className="font-medium">info@gmail.com</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <MdPhoneInTalk className="text-N50" />
+                      <p className="font-medium">+251913428778</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <MdFax className="text-N50" />
+                      <p className="font-medium">fax1232</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
