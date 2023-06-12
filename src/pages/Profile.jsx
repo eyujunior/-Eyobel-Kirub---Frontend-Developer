@@ -6,6 +6,8 @@ import {
   MdFax,
   MdPhoneInTalk,
 } from "react-icons/md";
+import { BsFiles } from "react-icons/bs";
+import BranchCard from "../components/common/BranchCard";
 const Profile = () => {
   return (
     <div className="w-11/12 mx-auto rounded-xl bg-white mt-8 shadow-md">
@@ -32,7 +34,7 @@ const Profile = () => {
           </div>
         </div>
         <div className="flex gap-4 xl:gap-8 flex-col md:flex-row">
-          <div className="flex flex-col gap-4 2xl:gap-6 w-1/3">
+          <div className="flex flex-col gap-4 2xl:gap-6 md:w-1/3">
             <div className="p-4 2xl:p-6 bg-N99/30 rounded-md">
               <h2 className="capitalize font-medium text-green50 mb-1">
                 organization description
@@ -108,8 +110,8 @@ const Profile = () => {
               </div>
             </div>
           </div>
-          <div className="w-2/3 space-y-4 2xl:space-y-6">
-            <div className="bg-N99/30 rounded-md p-4 2xl:px-6 space-y-4">
+          <div className="md:w-2/3 space-y-4 2xl:space-y-6">
+            <div className="bg-N99/30 rounded-md p-4 2xl:px-6 space-y-6 xl:space-y-8">
               <div className="flex items-center gap-4 justify-between ">
                 <h2 className="capitalize font-medium text-N40">
                   Main Office Residence
@@ -118,8 +120,8 @@ const Profile = () => {
                   Organization ID: ED5E233A
                 </button>
               </div>
-              <div className="flex gap-8">
-                <div className="w-1/2 space-y-4">
+              <div className="flex gap-8 justify-between items-start lg:flex-row flex-col">
+                <div className="lg:w-1/2 space-y-4">
                   <div className="grid gap-4 grid-cols-2 capitalize text-N20">
                     <div>
                       <span className="text-sm text-N70">kebele</span>
@@ -212,13 +214,34 @@ const Profile = () => {
                     </div>
                   </div>
                 </div>
+                <div className="lg:w-2/5 md:w-3/4 bg-white rounded-md">
+                  <h3 className="text-green20 capitalize p-4 font-medium">
+                    Enterprise Main Office Location
+                  </h3>
+                  <img
+                    src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1174&q=80"
+                    width={600}
+                    height={600}
+                    alt=""
+                  />
+                  <div className="p-4">
+                    <h4 className=" capitalize text-green50 mb-4">
+                      other branches
+                    </h4>
+                    <div className="divide-y divide-N99">
+                      <BranchCard />
+                      <BranchCard />
+                      <BranchCard />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="bg-N99/30 rounded-md p-4 2xl:px-6 space-y-4">
               <h2 className="text-N30 font-semibold capitalize">
                 enterprise data
               </h2>
-              <div className="flex justify-between items-start">
+              <div className="flex justify-between items-start md:flex-row gap-4 flex-col">
                 <div className=" space-y-4">
                   <div>
                     <p className="text-sm text-N60">
@@ -239,8 +262,89 @@ const Profile = () => {
                     </h3>
                   </div>
                 </div>
-                <div className="bg-white p-4 rounded-md w-2/5 capitalize font-medium text-N50">
-                  <h4>total assets</h4>
+                <div className="bg-white p-4 rounded-md md:w-2/5 sm:w-1/2 w-full capitalize font-medium text-N50">
+                  <h4 className="mb-2 text-N70">total assets</h4>
+                  <div className="flex flex-col divide-y divider-N99 capitalize">
+                    <div className="flex items-center gpa-2 justify-between py-2">
+                      <p>cash</p>
+                      <h3 className="text-green50">1mill</h3>
+                    </div>
+                    <div className="flex items-center gpa-2 justify-between py-2">
+                      <p>material</p>
+                      <h3 className="text-green50">4 types</h3>
+                    </div>
+                    <div className="flex items-center gpa-2 justify-between py-2">
+                      <p>saving institution</p>
+                      <h3 className="text-green50">5mill</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-center gpa-2 justify-between py-2 sm:w-1/2 2xl:w-2/5">
+                <p className="text-green50">P.R. Certificate</p>
+                <h3>E12333D2322</h3>
+              </div>
+              <div className="flex items-center gpa-2 justify-between py-2 sm:w-1/2 2xl:w-2/5">
+                <p className="text-green50">Principal Reg. License number</p>
+                <div className="flex items-center gap-2">
+                  <BsFiles />
+                  princeipalDoc.pdf
+                </div>
+              </div>
+            </div>
+
+            <div className=" space-y-4">
+              <h2 className="text-N60 font-medium capitalize">
+                number of managed enterprise
+              </h2>
+              <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
+                <div className="p-4 rounded-md shadow space-y-4 flex flex-col items-center">
+                  <img
+                    src="https://images.unsplash.com/photo-1682687218147-9806132dc697?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxzZWFyY2h8MXx8bGFuZHNjYXBlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                    width={600}
+                    height={600}
+                    alt=""
+                  />
+                  <div>
+                    <h2 className="font-medium text-green50">Midroc Cement</h2>
+                    <p>Sister company</p>
+                  </div>
+                </div>
+                <div className="p-4 rounded-md shadow space-y-4 flex flex-col items-center">
+                  <img
+                    src="https://images.unsplash.com/photo-1682687218147-9806132dc697?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxzZWFyY2h8MXx8bGFuZHNjYXBlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                    width={600}
+                    height={600}
+                    alt=""
+                  />
+                  <div>
+                    <h2 className="font-medium text-green50">Midroc Cement</h2>
+                    <p>Sister company</p>
+                  </div>
+                </div>
+                <div className="p-4 rounded-md shadow space-y-4 flex flex-col items-center">
+                  <img
+                    src="https://images.unsplash.com/photo-1682687218147-9806132dc697?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxzZWFyY2h8MXx8bGFuZHNjYXBlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                    width={600}
+                    height={600}
+                    alt=""
+                  />
+                  <div>
+                    <h2 className="font-medium text-green50">Midroc Cement</h2>
+                    <p>Sister company</p>
+                  </div>
+                </div>
+                <div className="p-4 rounded-md shadow space-y-4 flex flex-col items-center">
+                  <img
+                    src="https://images.unsplash.com/photo-1682687218147-9806132dc697?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxzZWFyY2h8MXx8bGFuZHNjYXBlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                    width={600}
+                    height={600}
+                    alt=""
+                  />
+                  <div>
+                    <h2 className="font-medium text-green50">Midroc Cement</h2>
+                    <p>Sister company</p>
+                  </div>
                 </div>
               </div>
             </div>
