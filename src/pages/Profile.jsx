@@ -8,6 +8,7 @@ import {
 } from "react-icons/md";
 import { BsFiles } from "react-icons/bs";
 import BranchCard from "../components/common/BranchCard";
+import StatusCard from "../components/common/StatusCard";
 const Profile = () => {
   return (
     <div className="w-11/12 mx-auto rounded-xl bg-white mt-8 shadow-md">
@@ -109,6 +110,7 @@ const Profile = () => {
                 </div>
               </div>
             </div>
+            <StatusCard status="pending" />
           </div>
           <div className="md:w-2/3 space-y-4 2xl:space-y-6">
             <div className="bg-N99/30 rounded-md p-4 2xl:px-6 space-y-6 xl:space-y-8">
