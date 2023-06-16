@@ -5,11 +5,11 @@ const Joblist = () => {
   return (
     <div className="bg-green99/50 min-h-screen">
     <div className="layout py-12 space-y-6">
-      <div className="flex items-start gap-">
+      <div className="flex items-start gap-1">
         <AiOutlineLeft className="text-green50 mt-1" />
         <div>
           <h1 className="text-green50 font-medium mb-1">Posted Jobs</h1>
-          <p className="text-sm text-N60 w-3/4">
+          <p className="text-sm text-N60 w-11/12 sm:w-3/4">
             This section discusses the types of jobs posted for finding hiring
             labors for this organization
           </p>
@@ -20,8 +20,7 @@ const Joblist = () => {
         <p>Published</p>
         <p>Draft</p>
       </div>
-      <div className="grid grid-cols-3 gap-4">
-        <JobCard />
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         <JobCard />
         <JobCard />
         <JobCard />

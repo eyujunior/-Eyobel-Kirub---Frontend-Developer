@@ -5,6 +5,7 @@ import Certificate from "./pages/Certificate";
 import FingerPrint from "./pages/FingerPrint";
 import Profile from "./pages/Profile";
 import Joblist from "./pages/Joblist";
+import JobDetail from "./pages/JobDetail";
 function App() {
   const location = useLocation();
   const background = location.state && location.state.background;
@@ -31,6 +32,9 @@ function App() {
       </Routes>
       <Routes>
         <Route path="/job" element={<Joblist />}></Route>
+      </Routes>
+      <Routes>
+        <Route path="/job-detail" element={<JobDetail />}></Route>
       </Routes>
     </div>
   );
